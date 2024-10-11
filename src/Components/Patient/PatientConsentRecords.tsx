@@ -107,6 +107,10 @@ export default function PatientConsentRecords(props: {
       crumbsReplacements={{
         [facilityId]: { name: patient?.facility_object?.name },
         [patientId]: { name: patient?.name },
+        consultation: {
+          name: "Consultation",
+          uri: `/facility/${facilityId}/patient/${patientId}/consultation/${consultationId}/update`,
+        },
         [consultationId]: {
           name:
             patient?.last_consultation?.suggestion === "A"
@@ -116,7 +120,7 @@ export default function PatientConsentRecords(props: {
               : patient?.last_consultation?.suggestion_text,
         },
       }}
-      backUrl={`/facility/${facilityId}/patient/${patientId}/consultation/${consultationId}/`}
+      backUrl={`/facility/${facilityId}/patient/${patientId}/consultation/${consultationId}/update`}
     >
       {fileUpload.Dialogues}
       {fileManager.Dialogues}
