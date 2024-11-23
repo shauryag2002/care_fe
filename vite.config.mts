@@ -93,6 +93,7 @@ export default defineConfig(({ mode }) => {
       "https://egov-s3-facility-10bedicu.s3.amazonaws.com",
       "https://egov-s3-patient-data-10bedicu.s3.amazonaws.com",
       "http://localhost:4566",
+      "https://cdn.sheetjs.com/xlsx-latest/package/xlsx.mjs",
     ].join(" ");
 
   return {

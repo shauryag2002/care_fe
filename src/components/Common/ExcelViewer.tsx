@@ -1,4 +1,5 @@
 import { ReactNode, useEffect, useState } from "react";
+import * as XLSX from "https://cdn.sheetjs.com/xlsx-latest/package/xlsx.mjs";
 
 import CareIcon from "@/CAREUI/icons/CareIcon";
 

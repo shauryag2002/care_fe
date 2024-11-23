@@ -48,7 +48,8 @@
     "lint": "eslint ./src",
     "lint-fix": "eslint ./src --fix",
     "format": "prettier ./src ./cypress --write",
-    "sort-locales": "node ./scripts/sort-locales.js"
+    "sort-locales": "node ./scripts/sort-locales.js",
+    "vite": "vite --cdn https://cdn.sheetjs.com/xlsx-latest/package/xlsx.mjs"
   },
   "dependencies": {
     "@fontsource/figtree": "^5.1.1",
@@ -95,8 +96,7 @@
     "react-webcam": "^7.2.0",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
-    "use-keyboard-shortcut": "^1.1.6",
-    "xlsx": "^0.18.5"
+    "use-keyboard-shortcut": "^1.1.6"
   },
   "devDependencies": {
     "@julr/vite-plugin-validate-env": "^1.1.1",
