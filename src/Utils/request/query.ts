@@ -113,3 +113,14 @@ const debouncedQuery = <Route extends ApiRoute<unknown, unknown>>(
   };
 };
 query.debounced = debouncedQuery;
+
+// Query function for fetching terminology data from Google Sheets
+export const fetchTerminologyData = () => {
+  return query(
+    {
+      path: "/api/v1/google_sheets/terminology/fetch/",
+      method: "GET",
+      TRes: { data: any[] },
+    }
+  );
+};

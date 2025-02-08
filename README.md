@@ -154,6 +154,32 @@ The build is minified and the filenames include the hashes.
 
 **🚀 Your app is ready to be deployed!**
 
+### Google Sheets Integration
+
+To set up and use the Google Sheets integration for terminology management, follow these steps:
+
+1. **Google Sheets API Setup:**
+   - Go to the [Google Cloud Console](https://console.cloud.google.com/).
+   - Create a new project or select an existing project.
+   - Enable the Google Sheets API for your project.
+   - Create credentials (API key or OAuth 2.0 client ID) for accessing the Google Sheets API.
+   - Download the credentials file (JSON) and save it securely.
+
+2. **Environment Variables:**
+   - Add the following environment variables to your project's configuration:
+     ```sh
+     GOOGLE_SHEETS_API_KEY=<your_google_sheets_api_key>
+     GOOGLE_SHEETS_SPREADSHEET_ID=<your_google_sheets_spreadsheet_id>
+     ```
+
+3. **Terminology Manager Component:**
+   - The `TerminologyManager` component provides a user interface for managing terminologies sourced from Google Sheets.
+   - It allows users to view and edit terminologies, and the changes are synchronized with Google Sheets in real-time.
+
+4. **Usage:**
+   - Import and use the `TerminologyManager` component in your application where you want to provide terminology management functionality.
+   - Ensure that the necessary API endpoints for fetching and syncing terminology data are properly configured in the backend.
+
 <div align="center">
 
 <br />

@@ -24,3 +24,16 @@ export default function mutate<Route extends ApiRoute<unknown, unknown>>(
     return callApi(route, { ...options, body: variables });
   };
 }
+
+// Mutation function for syncing terminology data to Google Sheets
+export const syncTerminologyData = (data: any[]) => {
+  return mutate(
+    {
+      path: "/api/v1/google_sheets/terminology/sync/",
+      method: "POST",
+      TBody: { data },
+      TRes: { success: boolean },
+    },
+    { body: { data } }
+  );
+};
