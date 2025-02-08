@@ -666,6 +666,19 @@ const routes = {
       TRes: Type<PaginatedResponse<MedicationAdministration>>(),
     },
   },
+
+  // Google Sheets Integration
+  fetchTerminologyData: {
+    path: "/api/v1/google_sheets/terminology/fetch/",
+    method: "GET",
+    TRes: Type<{ data: any[] }>(),
+  },
+  syncTerminologyData: {
+    path: "/api/v1/google_sheets/terminology/sync/",
+    method: "POST",
+    TBody: Type<{ data: any[] }>(),
+    TRes: Type<{ success: boolean }>(),
+  },
 } as const;
 
 export default routes;
