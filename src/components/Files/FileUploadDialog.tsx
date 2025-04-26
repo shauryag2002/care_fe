@@ -155,7 +155,7 @@ export default function FileUploadDialog({
                     }}
                     className="ml-0.5 mb-0.5"
                   />
-                  {!fileUpload.fileNames[index] && fileUpload.error && (
+                  {fileUpload.error && (
                     <p className="mt-2 text-sm text-red-600">
                       {fileUpload.error}
                     </p>
@@ -194,7 +194,10 @@ export default function FileUploadDialog({
           </Button>
           <Button
             variant="destructive"
-            onClick={fileUpload.clearFiles}
+            onClick={() => {
+              fileUpload.clearFiles();
+              onOpenChange(false);
+            }}
             disabled={fileUpload.uploading}
           >
             <CareIcon icon="l-trash-alt" className="mr-1" />

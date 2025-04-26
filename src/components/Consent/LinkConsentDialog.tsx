@@ -218,7 +218,7 @@ export default function LinkConsentDialog({
   const handleUploadDialogClose = (open: boolean) => {
     setOpenUploadDialog(open);
 
-    if (!open) {
+    if (!open && !fileUpload.error) {
       handleSuccess();
     }
   };
